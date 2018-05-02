@@ -10,6 +10,7 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.10/css/all.css" integrity="sha384-+d0P83n9kaQMCwj8F4RJB66tzIwOKmrdb46+porD/OvrJ+37WqIM7UoBtwHO6Nlg" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Do+Hyeon" rel="stylesheet">
     <link rel="stylesheet" type="text/css" media="screen" href="./assets/style.css" />
     <!-- <script src="main.js"></script> -->
 </head>
@@ -21,6 +22,13 @@
             <div class= "row">
                 <div class= "col-md-12">
                     <h1>Survey Questions</h1>
+                </div>
+            </div>
+            <div class ="row">
+                <div class="col-md">
+                        <div class="input-group mb-3">
+                                <input type="text" class="form-control" id="name" placeholder="Name" aria-label="Name" aria-describedby="basic-addon1">
+                        </div>
                 </div>
             </div>
             <div class="row">
@@ -112,7 +120,7 @@
                             <div class="col-md">
                                     <form class="form-inline">
                                             <label class="my-1 mr-2" for="inlineFormCustomSelectPref">Question 1</label>
-                                            <select class="custom-select my-1 mr-sm-2" id="inlineFormCustomSelectPref">
+                                            <select class="custom-select my-1 mr-sm-2" id="4">
                                               <option selected>Choose...</option>
                                               <option value="1">One (Strongly Agree)</option>
                                               <option value="2">Two</option>
@@ -137,7 +145,7 @@
                                 <div class="col-md">
                                         <form class="form-inline">
                                                 <label class="my-1 mr-2" for="inlineFormCustomSelectPref">Question 1</label>
-                                                <select class="custom-select my-1 mr-sm-2" id="inlineFormCustomSelectPref">
+                                                <select class="custom-select my-1 mr-sm-2" id="5">
                                                   <option selected>Choose...</option>
                                                   <option value="1">One (Strongly Agree)</option>
                                                   <option value="2">Two</option>
@@ -160,9 +168,9 @@
                                 </div>
                                 <div class="row">
                                     <div class="col-md">
-                                            <form class="form-inline">
+                                            <fform class="form-inline" method= "POST" action= "./survey">
                                                     <label class="my-1 mr-2" for="inlineFormCustomSelectPref">Question 1</label>
-                                                    <select class="custom-select my-1 mr-sm-2" id="inlineFormCustomSelectPref">
+                                                    <select class="custom-select my-1 mr-sm-2" name="question6" id="6">
                                                       <option selected>Choose...</option>
                                                       <option value="1">One (Strongly Agree)</option>
                                                       <option value="2">Two</option>
@@ -188,7 +196,7 @@
                                         <div class="col-md">
                                                 <form class="form-inline">
                                                         <label class="my-1 mr-2" for="inlineFormCustomSelectPref">Question 1</label>
-                                                        <select class="custom-select my-1 mr-sm-2" id="inlineFormCustomSelectPref">
+                                                        <select class="custom-select my-1 mr-sm-2" id="7">
                                                           <option selected>Choose...</option>
                                                           <option value="1">One (Strongly Agree)</option>
                                                           <option value="2">Two</option>
@@ -213,7 +221,7 @@
                                             <div class="col-md">
                                                     <form class="form-inline">
                                                             <label class="my-1 mr-2" for="inlineFormCustomSelectPref">Question 1</label>
-                                                            <select class="custom-select my-1 mr-sm-2" id="inlineFormCustomSelectPref">
+                                                            <select class="custom-select my-1 mr-sm-2" id="8">
                                                               <option selected>Choose...</option>
                                                               <option value="1">One (Strongly Agree)</option>
                                                               <option value="2">Two</option>
@@ -238,7 +246,7 @@
                                                 <div class="col-md">
                                                         <form class="form-inline">
                                                                 <label class="my-1 mr-2" for="inlineFormCustomSelectPref">Question 1</label>
-                                                                <select class="custom-select my-1 mr-sm-2" id="inlineFormCustomSelectPref">
+                                                                <select class="custom-select my-1 mr-sm-2" id="9">
                                                                   <option selected>Choose...</option>
                                                                   <option value="1">One (Strongly Agree)</option>
                                                                   <option value="2">Two</option>
@@ -263,7 +271,7 @@
                                                     <div class="col-md">
                                                             <form class="form-inline">
                                                                     <label class="my-1 mr-2" for="inlineFormCustomSelectPref">Question 1</label>
-                                                                    <select class="custom-select my-1 mr-sm-2" id="inlineFormCustomSelectPref">
+                                                                    <select class="custom-select my-1 mr-sm-2" id="10">
                                                                       <option selected>Choose...</option>
                                                                       <option value="1">One (Strongly Agree)</option>
                                                                       <option value="2">Two</option>
@@ -274,7 +282,25 @@
                                                             </form>
                                                     </div>
                                                 </div>
-                            <button type="submit" class="btn btn-primary my-1" id="btn">Submit</button>
+                            <button type="submit" class="btn btn-primary my-1" data-toggle="modal" data-target="#exampleModal" id="btn">Submit</button>
+                            <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                    <div class="modal-dialog" role="document">
+                                      <div class="modal-content">
+                                        <div class="modal-header">
+                                          <h5 class="modal-title" id="exampleModalLabel">Tu Nuevo Amigo!</h5>
+                                          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                            <span aria-hidden="true">&times;</span>
+                                          </button>
+                                        </div>
+                                        <div class="modal-body" id="modal">
+                                          ...
+                                        </div>
+                                        <div class="modal-footer">
+                                          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
 
         </div>
         <script
@@ -286,15 +312,49 @@
         $("#btn").on("click", function(event){
             event.preventDefault();
             var newAmigo = {
+                name: $("#name").val().trim(),
                 score:[ 
                         $("#1").val(),
                         $("#2").val(),
-                        $("#3").val()
+                        $("#3").val(),
+                        $("#4").val(),
+                        $("#5").val(),
+                        $("#6").val(),
+                        $("#7").val(),
+                        $("#8").val(),
+                        $("#9").val(),
+                        $("#10").val()
+
                       ]
             }
 
-            console.log(newAmigo);
+            // console.log(newAmigo);
+            $.post("/api/amigos", newAmigo,
+        function(err, data){
+                console.log("A new user has been added!");
         })
+        
+        var currentURL = window.location.origin;
+
+        $.ajax({ url: currentURL + "/api/amigosdata", method: "GET" })
+                .then(function(amigosData, err){
+                console.log(amigosData);
+                console.log("I'm very lonley");
+                var pic = ("<img " + amigosData[0].picture +" width='200px height='200px>");
+                var test = "hello im carlos";
+                console.log(amigosData[0].picture);
+                console.log(amigosData[0].totalnum);
+                $("#modal").append(pic);
+                $("#modal").append(test);
+
+                
+                     
+
+        })
+
+        })
+
+
         
         </script>
             
