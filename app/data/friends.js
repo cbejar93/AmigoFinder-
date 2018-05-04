@@ -15,13 +15,7 @@ var amigosData = [
             4,
 
         ],
-        totalScorefunc: function(total, num){
-            return total + num;
-        },
-        totalnum: function(item){
-            amigosData[0].score.reduce(amigosData[0].totalScorefunc);
-        }
-
+        
     },
     {
         name: "Malik",
